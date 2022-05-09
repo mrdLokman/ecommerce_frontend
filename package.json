@@ -1,0 +1,12 @@
+{ 
+  "scripts": {
+    "app": "yarn workspace mobile_app start",
+    "web": "yarn workspace web_app start"
+  },
+  "workspaces": [
+    "mobile_app",
+    "web_app"
+  ],
+  "private": true,
+  "author": "Merdji loqman"
+}
