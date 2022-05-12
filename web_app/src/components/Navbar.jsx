@@ -1,5 +1,5 @@
 import React from 'react'
-import { CustomSearchIcon, ShoppingCart } from './icons'
+import { CustomSearchIcon, ShoppingCartIcon } from './icons'
 import Badge from '@mui/material/Badge';
 import MenuItem from './MenuItem';
 
@@ -24,7 +24,7 @@ const Navbar = () => {
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
-              <ShoppingCart   color="black" size={"medium"} />
+              <ShoppingCartIcon className="text-black w-7 h-7" />
             </Badge>
           </MenuItem>
         </div>

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 import { useState } from "react"
 import { SliderLeftArrow, SliderRightArrow } from "./icons"
+import { slideItems } from "../data/dummy_data";
 
 
 const Wrapper = styled.div`
@@ -8,38 +9,12 @@ const Wrapper = styled.div`
     transform: translateX(${(props)=>props.index* -100}vw);
 `
 
-
-
-const slideItems = [
-    {
-        id:1,
-        img: "https://png.pngtree.com/png-clipart/20210502/original/pngtree-fashion-street-male-model-png-image_6269795.jpg",
-        title:"SUMMER SALE",
-        description: "DON'T COMPROSIME ON STYLE! GET FLAT 30% ON NEW ARRIVALS.",
-        bg : "",
-    },
-    {
-        id:2,
-        img: "https://images.pexels.com/photos/1549200/pexels-photo-1549200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        title:"TREND SALE",
-        description: "DON'T MISS THIS TRENDY SHASION! IT'S AWESOME.",
-        bg : "",
-    },
-    {
-        id:3,
-        img: "https://images.pexels.com/photos/794063/pexels-photo-794063.jpeg?auto=compress&cs=tinysrgb&w=600",
-        title:"TOP SALE",
-        description: "Tessa Thompson Walks Her Dog in Sky-High Platforms.",
-        bg : "",
-    },
-]
-
 const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0);
     
     const handleClick = (direction) => {
-        if(direction === "left") slideIndex > 0 ? setSlideIndex(slideIndex-1): setSlideIndex(2);
-        else slideIndex < 2 ? setSlideIndex(slideIndex+1): setSlideIndex(0);
+        if(direction === "left") slideIndex > 0 ? setSlideIndex(slideIndex-1): setSlideIndex(slideItems.length-1);
+        else slideIndex < slideItems.length-1 ? setSlideIndex(slideIndex+1): setSlideIndex(0);
     };
 
     return (
@@ -50,9 +25,10 @@ const Slider = () => {
             <Wrapper index={slideIndex}>
                 {
                     slideItems.map((item)=>{
+                        console.log(item.bg);
                         return (
-                            <div key={item.id} className="flex items-center h-screen w-screen bg-teal-50">
-                                <div className="flex-1 h-full">
+                            <div key={item.id} className={`flex items-center h-screen w-screen bg-[#${item.bg}]`}>
+                                <div className="flex-1 h-full flex justify-center">
                                     <img className="h-4/5" alt="img" src={item.img}/>
                                 </div>
                                 <div className="flex-1 p-12">
