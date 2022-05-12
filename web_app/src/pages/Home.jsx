@@ -1,9 +1,14 @@
 import React from 'react'
-import { Navbar } from '../components'
+import { Announcement, Navbar, Slider } from '../components'
 
 const Home = () => {
   return (
-    <Navbar />
+    <div>
+      <Announcement />
+      <Navbar />
+      <Slider />
+    </div>
+    
   )
 }
 
