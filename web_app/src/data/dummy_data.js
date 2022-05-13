@@ -74,3 +74,83 @@ export const popularProducts = [
         img: require("./images/product-8.png"),
     }
 ]
+
+
+export const colorOptions = [
+    {
+        id:1,
+        value:"White"
+    },
+    {
+        id:2,
+        value:"Black"
+    },
+    {
+        id:3,
+        value:"Blue"
+    },
+    {
+        id:4,
+        value:"Red"
+    },
+    {
+        id:5,
+        value:"Yellow"
+    },
+    {
+        id:6,
+        value:"Green"
+    }
+]
+
+export const sizeOptions = [
+    {
+        id:1,
+        value:"XS"
+    },
+    {
+        id:2,
+        value:"S"
+    },
+    {
+        id:3,
+        value:"M"
+    },
+    {
+        id:4,
+        value:"L"
+    },
+    {
+        id:5,
+        value:"XL"
+    }
+]
+
+export const orderOptions = [
+    {
+        id:1,
+        value:"Newest"
+    },
+    {
+        id:2,
+        value:"Price (asc)"
+    },
+    {
+        id:3,
+        value:"Price (desc)"
+    }
+]
+
+export const productExample = {
+    id: "62783e933cef9d81322b33e5",
+    title: "Nike tshirt",
+    description: "Nike tshirt for men & women",
+    img: require("./images/product-1.png"),
+    categories: [
+        "tshirt",
+        "man",
+        "woman"
+    ],
+    size: "M",
+    price: 30
+}

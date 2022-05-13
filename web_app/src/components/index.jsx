@@ -7,5 +7,4 @@ import Newsletter from "./Newsletter";
 import Footer from "./Footer";
 
 
-
 export {Navbar,Announcement, Slider, CategoriesSection, ProductsSection, Newsletter, Footer};
