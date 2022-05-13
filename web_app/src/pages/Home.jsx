@@ -1,5 +1,6 @@
 import React from 'react'
-import { Announcement, Navbar, Slider } from '../components'
+import { Announcement, Navbar, Slider, CategoriesSection, ProductsSection, Newsletter, Footer } from '../components'
+
 
 const Home = () => {
   return (
@@ -7,6 +8,10 @@ const Home = () => {
       <Announcement />
       <Navbar />
       <Slider />
+      <CategoriesSection />
+      <ProductsSection />
+      <Newsletter />
+      <Footer />
     </div>
     
   )

@@ -7,6 +7,7 @@ import { slideItems } from "../data/dummy_data";
 const Wrapper = styled.div`
     display: flex;
     transform: translateX(${(props)=>props.index* -100}vw);
+    transition: all 1.5s ease;
 `
 
 const Slider = () => {
@@ -25,9 +26,9 @@ const Slider = () => {
             <Wrapper index={slideIndex}>
                 {
                     slideItems.map((item)=>{
-                        console.log(item.bg);
+                        console.log(item.bg); //${item.bg}
                         return (
-                            <div key={item.id} className={`flex items-center h-screen w-screen bg-[#${item.bg}]`}>
+                            <div key={item.id} className={`flex items-center h-screen w-screen bg-[#D5D6FF]`}>
                                 <div className="flex-1 h-full flex justify-center">
                                     <img className="h-4/5" alt="img" src={item.img}/>
                                 </div>
