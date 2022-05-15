@@ -7,6 +7,8 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import HomeIcon from '@mui/icons-material/Home';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 
 
 export const CustomSearchIcon = ({ className = "w-6 h-6" }) => {
@@ -102,6 +104,24 @@ export const CustomEMailIcon = ({className = ""}) => {
     return (
         <div className={`flex items-center justify-center ${className}`}>
             <EmailIcon />
+        </div> 
+    )
+};
+
+
+
+export const CustomAddIcon = ({className = ""}) => {
+    return (
+        <div className={`flex items-center justify-center ${className}`}>
+            <AddIcon />
+        </div> 
+    )
+};
+
+export const CustomRemoveIcon = ({className = ""}) => {
+    return (
+        <div className={`flex items-center justify-center ${className}`}>
+            <RemoveIcon />
         </div> 
     )
 };

@@ -2,14 +2,13 @@ import React from 'react'
 
 const SelectInput = ({title, itemOptions}) => {
   return (
-    <select className="p-3 mr-5 border rounded-sm border-black">
+    <select className="p-3 mr-5 border rounded-sm border-black cursor-pointer">
         { title && (<option disabled selected>{title}</option>)}
         {
             itemOptions.map((item) => { 
                 return <option key={item.id}>{item.value}</option>;
             })
         }
-        
     </select>
   )
 }

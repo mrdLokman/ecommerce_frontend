@@ -146,6 +146,11 @@ export const productExample = {
     title: "Nike tshirt",
     description: "Nike tshirt for men & women",
     img: require("./images/product-1.png"),
+    colors: [
+        "#263034",
+        "#976249",
+        "#294079"
+    ],
     categories: [
         "tshirt",
         "man",
