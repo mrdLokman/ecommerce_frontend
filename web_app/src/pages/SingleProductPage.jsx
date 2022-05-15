@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Footer, Announcement, ProductsSection, Newsletter } from '../components'
+import { Navbar, Footer, Announcement, Newsletter } from '../components'
 import { CustomAddIcon, CustomRemoveIcon } from '../components/icons'
 import { SelectInput } from '../components/mini'
 import { productExample } from '../data/dummy_data'

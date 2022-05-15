@@ -1,8 +1,8 @@
-import { Home, ProductPage, SingleProductPage } from './pages'
+import { Login } from './pages'
 
 function App() {
   return (
-    <SingleProductPage />
+    <Login />
   );
 }
 
