@@ -1,8 +1,8 @@
-import { Login } from './pages'
+import { Cart } from './pages'
 
 function App() {
   return (
-    <Login />
+    <Cart />
   );
 }
 
