@@ -3,7 +3,7 @@ import React from 'react'
 const Register = () => {
   return (
     <div className="w-screen h-screen flex items-center justify-center bg-register bg-center bg-cover">
-        <div className="w-2/5 p-5 bg-white">
+        <div className="w-4/5 tablet:w-2/5 p-5 bg-white">
             <h1 className="font-light text-2xl mb-2">CREATE AN ACCOUNT</h1>
             <form className="flex flex-wrap">
                 <input className="flex-1 min-w-[40%] mt-5 mr-3 p-2 border" placeholder='first name' />

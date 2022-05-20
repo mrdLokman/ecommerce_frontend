@@ -1,4 +1,4 @@
-import { Cart } from './pages'
+import { Cart, Home, Login, ProductsPage, Register, SingleProductPage } from './pages'
 
 function App() {
   return (

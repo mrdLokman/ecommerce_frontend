@@ -3,8 +3,8 @@ import { CustomAddressIcon, CustomEMailIcon, CustomFacebookIcon, CustomInstagram
 
 const Footer = () => {
   return (
-    <div className="flex items-start justify-center">
-        <div className="flex-1 flex flex-col p-5">
+    <div className="flex flex-col tablet:flex-row items-center tablet:items-start justify-center">
+        <div className="flex-1 flex items-center tablet:items-start flex-col p-5">
             <h1 className="text-xl font-bold">MyShop.</h1>
             <p className="my-5 px-3">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
             <div className="flex px-3">
@@ -13,7 +13,7 @@ const Footer = () => {
                 <CustomTwitterIcon className="w-10 h-10 cursor-pointer rounded-full text-white bg-[#1DA1F2] mr-5" />
             </div>
         </div>
-        <div className="flex-1 p-5">
+        <div className="hidden tablet:block flex-1 p-5">
             <h3 className="mb-7 font-semibold text-lg">Usefull Links</h3>
             <ul className="m-0 p-0 flex flex-wrap px-3">
                 <li className="cursor-pointer w-1/2 mb-2">Home</li>
@@ -25,8 +25,8 @@ const Footer = () => {
                 <li className="cursor-pointer w-1/2 mb-2">Terms</li>
             </ul>
         </div>
-        <div className="flex-1 p-5">
-            <h3 className="mb-7 font-semibold text-lg">Contact infos</h3>
+        <div className="flex-1 p-5 w-full bg-gray-200 tablet:bg-white">
+            <h3 className="mb-7 font-semibold text-center  text-lg">Contact infos</h3>
             <div className="px-3">
                 <div className="cursor-pointer mb-2 p-1 flex justify-start items-center">
                     <CustomAddressIcon className="w-5 h-5 mr-4" />

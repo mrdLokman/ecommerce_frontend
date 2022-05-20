@@ -26,24 +26,24 @@ const Cart = () => {
     <div>
       <Navbar />
       <Announcement />
-      <div className="p-5">
-        <h1 className="font-light text-center text-2xl">YOUR BAG</h1>
+      <div className="p2 tablet:p-5">
+        <h1 className="font-light text-center text-3xl mt-3">YOUR BAG</h1>
         <div className="flex items-center justify-between p-5">
           <button className="font-semibold p-3 cursor-pointer border border-black  bg-transparent text-black">CONTINUE SHOPPING</button>
-          <div className="">
+          <div className="hidden tablet:block">
             <span className="underline mx-2 cursor-pointer">Shopping Bag</span>
             <span className="underline mx-2 cursor-pointer">Your wishlist(2)</span>
           </div>
           <button className="font-semibold p-3 cursor-pointer border-none bg-black text-white">CHECKOUT</button>
         </div>
-        <div className="flex justify-between">
+        <div className="flex flex-col tablet:flex-row justify-between p-3">
           <div className="flex-[3]">
             {
-              products.map((item)=>{
+              products.map((item, index)=>{
                 return (
                   <>
                     <CartProduct key={item.id}  product={item} />
-                    <hr className=" bg-gray-300 border-none h-[1px]" />
+                    {index<products.length-1 && <hr className=" bg-gray-300 border-none h-[1px]" />}
                   </>
                   
                 );
@@ -54,7 +54,7 @@ const Cart = () => {
           <CartSummary />
         </div>
       </div>
-      <Footer />
+      <Footer /> 
     </div>
   )
 }

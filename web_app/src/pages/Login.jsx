@@ -3,7 +3,7 @@ import React from 'react'
 const Login = () => {
   return (
     <div className="w-screen h-screen flex items-center justify-center bg-register bg-center bg-cover">
-        <div className="w-1/4 p-5 bg-white">
+        <div className="w-4/5 tablet:w-1/4 p-5 bg-white">
             <h1 className="font-light text-2xl mb-2">SING IN</h1>
             <form className="flex flex-col flex-wrap">
                 <input className="flex-1 min-w-[40%] mt-3 p-2 border" placeholder='username' />

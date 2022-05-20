@@ -19,7 +19,7 @@ const Slider = () => {
     };
 
     return (
-        <div className="h-screen w-full flex overflow-hidden">
+        <div className="hidden tablet:flex h-screen w-full overflow-hidden">
             <div onClick={()=>{handleClick("left")}} className="z-10 w-12 h-12 rounded-full cursor-pointer bg-gray-50 opacity-50 flex justify-center items-center absolute top-0 bottom-0 left-0 m-auto ml-3 hover:ml-2">
                 <SliderLeftArrow color="action" size={"medium"}/>
             </div>
@@ -28,7 +28,7 @@ const Slider = () => {
                     slideItems.map((item)=>{
                         console.log(item.bg); //${item.bg}
                         return (
-                            <div key={item.id} className={`flex items-center h-screen w-screen bg-[#D5D6FF]`}>
+                            <div key={item.id} style={{backgroundColor: item.bg}} className="flex items-center h-screen w-screen">
                                 <div className="flex-1 h-full flex justify-center">
                                     <img className="h-4/5" alt="img" src={item.img}/>
                                 </div>
