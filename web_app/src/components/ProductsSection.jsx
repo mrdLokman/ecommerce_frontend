@@ -30,27 +30,33 @@ const ProductsSection = ({ categoryParam, filtersParam, sortParma }) => {
   useEffect(() => {
     categoryParam
       ? setFiltredProducts(
-          products.filter((item) =>{
-            return Object.entries(filtersParam).every(([key, value]) =>{
-              return item[key].includes(value)
-            })
+          products.filter((item) => {
+            return Object.entries(filtersParam).every(([key, value]) => {
+              return item[key].includes(value);
+            });
           })
         )
-      : setFiltredProducts(products);
+      : setFiltredProducts(products.slice(0, 8));
   }, [products, categoryParam, filtersParam]);
 
   useEffect(() => {
-    switch(sortParma){
+    switch (sortParma) {
       case "asc":
-        setFiltredProducts((prev)=> [...prev].sort((a,b)=>a.price - b.price))
-      break;
+        setFiltredProducts((prev) =>
+          [...prev].sort((a, b) => a.price - b.price)
+        );
+        break;
       case "desc":
-        setFiltredProducts((prev)=> [...prev].sort((a,b)=>b.price - a.price))
-      break;
+        setFiltredProducts((prev) =>
+          [...prev].sort((a, b) => b.price - a.price)
+        );
+        break;
       default:
-        setFiltredProducts((prev)=> [...prev].sort((a,b)=>a.createdAt - b.createdAt))
+        setFiltredProducts((prev) =>
+          [...prev].sort((a, b) => a.createdAt - b.createdAt)
+        );
     }
-  }, [sortParma])
+  }, [sortParma]);
 
   return (
     <div className="flex p-5 flex-wrap justify-center tablet:justify-between">
