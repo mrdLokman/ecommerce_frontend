@@ -1,12 +1,17 @@
 import React from 'react'
 
-const SelectInput = ({title, itemOptions}) => {
+const SelectInput = ({name, title, itemOptions, onChange}) => {
+
+  const handlSelect = (e) => {
+    onChange(e);
+  }
+
   return (
-    <select className="p-3 my-2 tablet:mr-5 border rounded-sm border-black cursor-pointer">
-        { title && (<option disabled selected>{title}</option>)}
+    <select name={name} onChange={handlSelect} className="p-3 my-2 tablet:mr-5 border rounded-sm border-black cursor-pointer">
+        { title && (<option disabled value={title}>{title}</option>)}
         {
             itemOptions.map((item) => { 
-                return <option key={item.id}>{item.value}</option>;
+                return <option key={item.id} value={item.key}>{item.value}</option>;
             })
         }
     </select>

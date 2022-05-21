@@ -1,8 +1,8 @@
-import { Cart, Home, Login, ProductsPage, Register, SingleProductPage } from './pages'
+import Router from './Routing';
 
 function App() {
   return (
-    <Cart />
+    <Router />
   );
 }
 

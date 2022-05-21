@@ -26,7 +26,6 @@ const Slider = () => {
             <Wrapper index={slideIndex}>
                 {
                     slideItems.map((item)=>{
-                        console.log(item.bg); //${item.bg}
                         return (
                             <div key={item.id} style={{backgroundColor: item.bg}} className="flex items-center h-screen w-screen">
                                 <div className="flex-1 h-full flex justify-center">
